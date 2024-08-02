@@ -1,0 +1,77 @@
+.contact-section {
+    min-height: 600px;
+    background: var(--color-highlight);
+  
+    .contact-content {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      flex-direction: column; // Adiciona esta linha para corrigir a flex-direction
+
+      h2.title-content {
+        max-width: 700px;
+        letter-spacing: -3px;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 2.8rem;
+        margin: 2rem auto;
+      }
+
+     
+      
+      h2.title-content span {
+        z-index: -1;
+        background: #9afd8d;
+      }
+  
+      h2 {
+        text-align: center;
+        padding: 10px;
+      }
+  
+      p {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+  
+      .form-contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        width: 100%; // Adiciona esta linha para garantir que o formulário ocupe toda a largura disponível
+  
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+          width: 100%; // Garante que todos os elementos ocupem toda a largura da coluna
+        }
+  
+        textarea {
+          grid-column: span 2; // Garante que o textarea ocupe duas colunas
+        }
+  
+        button {
+          grid-column: span 2; // Garante que o botão ocupe duas colunas
+         
+     
+        }
+  
+        @media (max-width: 700px) {
+          grid-template-columns: 1fr;
+  
+          textarea {
+            grid-column: span 1; // Ajusta para uma coluna em telas menores
+          }
+  
+          button {
+            grid-column: span 1; // Ajusta para uma coluna em telas menores
+          }
+        }
+      }
+    }
+  }
+  

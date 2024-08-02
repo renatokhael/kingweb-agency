@@ -1,0 +1,36 @@
+.ecommerce-section {
+    background: #fff;
+    min-height: 600px;
+  
+    .ecommerce-content {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+  
+      @media (max-width: 700px) {
+        flex-direction: column;
+        padding: 25px;
+      }
+  
+      button {
+        margin-top: 2rem;
+      }
+  
+      .text-content {
+        max-width: 50%;
+  
+        @media (max-width: 700px) {
+          max-width: 100%;
+        }
+  
+        h1 {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+  

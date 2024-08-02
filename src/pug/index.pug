@@ -1,10 +1,33 @@
-docytype html
-html(lang="pt-br")
+doctype html
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Meu Projeto
+        title KingWeb - Criação de Sites, Landing Pages e Lojas Virtuais
         link(rel="stylesheet" href="css/styles.css")
-    body 
-        h1 Olá, Mundo! 
-        p Este é um projeto usando Pug e Sass
+        link(href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet")
+        link(rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png")
+        link(rel="manifest" href="./favicon/site.webmanifest")
+
+    body
+        include components/header.pug
+        include components/hero.pug
+        include components/features.pug
+        include components/ecommerce.pug
+        include components/portfolio.pug
+        include components/entrepreneur.pug
+        include components/contact.pug
+        include components/footer.pug
+
+        script(async src="https://www.googletagmanager.com/gtag/js?id=G-Q6HSS0JDSC")
+script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-Q6HSS0JDSC");
+        script(src="./js/script.js") 

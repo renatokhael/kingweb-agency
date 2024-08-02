@@ -1,0 +1,46 @@
+.hero-section {
+    padding-top: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    padding-inline: 25px;
+    padding-bottom: 150px;
+    background: #ffffff url("../assets/hero/banner-bg.png") no-repeat center center;
+    background-size: cover;
+    
+    .hero-content {
+      text-align: center;
+      max-width: 700px;
+    }
+    
+    .title-content {
+      margin: 2rem 1rem;
+    }
+    
+    .btn-primary {
+      margin: 2rem 1rem;
+    }
+    
+    .banner-image {
+      max-width: 1080px;
+      width: 100%;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    button {
+        background: black;
+    }
+    
+    @media (max-width: 700px) {
+      .banner-image {
+        display: none;
+      }
+    }
+  }
+  

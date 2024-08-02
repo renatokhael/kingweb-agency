@@ -1,0 +1,32 @@
+section#contact.contact-section
+    .contact-content
+        .text-content
+            h2.title-content Converse com nossos especialistas
+            p Preencha o formulário ou nos envie uma mensagem via WhatsApp.
+            h2.title-content
+                img(src="./assets/icons/whatsapp.svg" alt="WhatsApp" width="32")
+                | 11 98972-5290
+            form.form-contact#contact-form
+                input(type="text" name="name" placeholder="Nome" required)
+                input(type="email" name="email" placeholder="E-mail" required)
+                input(type="text" name="phone" placeholder="Telefone" required)
+                input(type="text" name="subject" placeholder="Assunto" required)
+                textarea(name="message" placeholder="Mensagem" required)
+                button.btn-primary(type="submit") Enviar
+
+script(type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js")
+script(type="text/javascript").
+    (function(){
+        emailjs.init("L0A86yfdX9IXBVnBy"); // Substitua pelo seu User ID
+    })();
+
+script(type="text/javascript").
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_ipmmfou', 'template_kvgusin', this)
+            .then(function() {
+                alert('E-mail enviado com sucesso!');
+            }, function(error) {
+                alert('Erro ao enviar o e-mail: ' + JSON.stringify(error));
+            });
+    });

@@ -1,0 +1,56 @@
+.ecommerce-section {
+    background: #fff;
+    min-height: 600px;
+  
+    .ecommerce-content {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+  
+      @media (max-width: 700px) {
+        flex-direction: column;
+        padding: 25px;
+      }
+  
+      button {
+        margin-top: 2rem;
+      }
+
+      h2.title-content {
+        max-width: 700px;
+        letter-spacing: -3px;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 2.8rem;
+        margin: 2rem auto;
+      }
+      
+      h2.title-content span {
+        z-index: -1;
+        background: #9afd8d;
+      }
+  
+      .text-content {
+        max-width: 50%;
+  
+        @media (max-width: 700px) {
+          max-width: 100%;
+        }
+  
+        h2 {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  
+    .image-content {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
