@@ -1,0 +1,24 @@
+{
+  "name": "kingweb.site.pug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:pug": "pug src/pug/index.pug --out dist",
+    "build:sass": "node-sass src/sass/styles.scss dist/css/styles.css",
+    "build": "npm run build:pug && npm run build:sass",
+    "watch:pug": "pug src/pug/index.pug --out dist --watch",
+    "watch:sass": "node-sass src/sass/styles.scss dist/css/styles.css --watch",
+    "watch": "npm-run-all --parallel watch:pug watch:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
+}
