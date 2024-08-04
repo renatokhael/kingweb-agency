@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 window.onload = function () {
   document
-    .getElementById("contact-section")
+    .getElementById("contact")
     .addEventListener("submit", function (event) {
       event.preventDefault();
       // these IDs from the previous steps
